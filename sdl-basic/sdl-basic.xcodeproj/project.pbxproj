@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		37C8AC371EDBBA2E00C188FD /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37C8AC361EDBBA2E00C188FD /* main.cpp */; };
 		37C8AC3F1EDBBA4C00C188FD /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37C8AC3E1EDBBA4C00C188FD /* SDL2.framework */; };
+		37CECF3E1EDBC9B700529F2F /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 37CECF3D1EDBC9B700529F2F /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +28,8 @@
 		37C8AC331EDBBA2E00C188FD /* sdl-basic */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "sdl-basic"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37C8AC361EDBBA2E00C188FD /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		37C8AC3E1EDBBA4C00C188FD /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
+		37CECF3D1EDBC9B700529F2F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		37CECF3F1EDBC9CA00529F2F /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .gitignore; path = ../.gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +47,8 @@
 		37C8AC2A1EDBBA2E00C188FD = {
 			isa = PBXGroup;
 			children = (
+				37CECF3D1EDBC9B700529F2F /* README.md */,
+				37CECF3F1EDBC9CA00529F2F /* .gitignore */,
 				37C8AC351EDBBA2E00C188FD /* sdl-basic */,
 				37C8AC341EDBBA2E00C188FD /* Products */,
 				37C8AC3D1EDBBA4C00C188FD /* Frameworks */,
@@ -131,6 +136,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37CECF3E1EDBC9B700529F2F /* README.md in Sources */,
 				37C8AC371EDBBA2E00C188FD /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,6 +274,7 @@
 				37C8AC3C1EDBBA2E00C188FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
