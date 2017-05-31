@@ -14,6 +14,11 @@ int main(int argc, const char * argv[]) {
   const int SCREEN_WIDTH = 800;
   const int SCREEN_HEIGHT = 600;
   
+  // COLORS
+  const u_int32_t RED = 0xFF0000F;
+  const u_int32_t GREEN = 0x00FF00F;
+  const u_int32_t BLUE = 0x0000FFF;
+  
   if (SDL_Init(SDL_INIT_VIDEO) > 0) {
     std::cout << "SDL init failed." << std::endl;
     return 1;
@@ -49,8 +54,23 @@ int main(int argc, const char * argv[]) {
   
   Uint32 *buffer = new Uint32[SCREEN_WIDTH*SCREEN_HEIGHT];
   
-  // setting white - 0xFF is 255
-  memset(buffer, 0xFF, SCREEN_WIDTH*SCREEN_HEIGHT*sizeof(Uint32));
+  // setting white - 0xFF is 255 = white
+  // memset(buffer, 0xFF, SCREEN_WIDTH*SCREEN_HEIGHT*sizeof(Uint32));
+
+  
+  // setting white - 0 = black
+  memset(buffer, 0, SCREEN_WIDTH*SCREEN_HEIGHT*sizeof(Uint32));
+
+  for (int i=0; i<(SCREEN_WIDTH*SCREEN_HEIGHT)/3; i++) {
+    buffer[i] = RED;
+  }
+
+  for (int i=(SCREEN_WIDTH*SCREEN_HEIGHT)/3; i<((SCREEN_WIDTH*SCREEN_HEIGHT)/3)*2; i++) {
+    buffer[i] = GREEN;
+  }
+  for (int i=((SCREEN_WIDTH*SCREEN_HEIGHT)/3)*2; i<SCREEN_WIDTH*SCREEN_HEIGHT; i++) {
+    buffer[i] = BLUE;
+  }
   
   SDL_UpdateTexture(texture, NULL, buffer, SCREEN_WIDTH*sizeof(Uint32));
   SDL_RenderClear(renderer);
