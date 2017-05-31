@@ -10,6 +10,7 @@
 		37C8AC371EDBBA2E00C188FD /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37C8AC361EDBBA2E00C188FD /* main.cpp */; };
 		37C8AC3F1EDBBA4C00C188FD /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37C8AC3E1EDBBA4C00C188FD /* SDL2.framework */; };
 		37CECF3E1EDBC9B700529F2F /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 37CECF3D1EDBC9B700529F2F /* README.md */; };
+		37DDE5641EDE580100E2E4FF /* Screen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37DDE5621EDE580100E2E4FF /* Screen.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,6 +31,8 @@
 		37C8AC3E1EDBBA4C00C188FD /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
 		37CECF3D1EDBC9B700529F2F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		37CECF3F1EDBC9CA00529F2F /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .gitignore; path = ../.gitignore; sourceTree = "<group>"; };
+		37DDE5621EDE580100E2E4FF /* Screen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Screen.cpp; sourceTree = "<group>"; };
+		37DDE5631EDE580100E2E4FF /* Screen.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Screen.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 			isa = PBXGroup;
 			children = (
 				37C8AC361EDBBA2E00C188FD /* main.cpp */,
+				37DDE5621EDE580100E2E4FF /* Screen.cpp */,
+				37DDE5631EDE580100E2E4FF /* Screen.hpp */,
 			);
 			path = "sdl-basic";
 			sourceTree = "<group>";
@@ -138,6 +143,7 @@
 			files = (
 				37CECF3E1EDBC9B700529F2F /* README.md in Sources */,
 				37C8AC371EDBBA2E00C188FD /* main.cpp in Sources */,
+				37DDE5641EDE580100E2E4FF /* Screen.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
