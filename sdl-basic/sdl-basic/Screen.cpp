@@ -22,7 +22,8 @@ namespace particles {
     }
     
     m_window = SDL_CreateWindow("Particle Fire Explosion", SDL_WINDOWPOS_UNDEFINED,
-      SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
+                                SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT,
+                                SDL_WINDOW_SHOWN);
     
     if (m_window == NULL) {
       std::cout << "Could not create window: " << SDL_GetError() << std::endl;
@@ -31,8 +32,9 @@ namespace particles {
     }
     
     m_renderer = SDL_CreateRenderer(m_window, -1, SDL_RENDERER_PRESENTVSYNC);
+    
     m_texture = SDL_CreateTexture(m_renderer, SDL_PIXELFORMAT_RGB888,
-     SDL_TEXTUREACCESS_STATIC, SCREEN_WIDTH, SCREEN_HEIGHT);
+                                  SDL_TEXTUREACCESS_STATIC, SCREEN_WIDTH, SCREEN_HEIGHT);
     
     if (m_renderer == NULL) {
       std::cout << "Could not create render: " << SDL_GetError() << std::endl;
@@ -54,21 +56,17 @@ namespace particles {
     // setting collor 0 = black
     memset(m_buffer, 0, SCREEN_WIDTH*SCREEN_HEIGHT*sizeof(Uint32));
     
-    for (int i=0; i<(SCREEN_WIDTH*SCREEN_HEIGHT)/3; i++) {
-      m_buffer[i] = RED;
-    }
     
-    for (int i=(SCREEN_WIDTH*SCREEN_HEIGHT)/3; i<((SCREEN_WIDTH*SCREEN_HEIGHT)/3)*2; i++) {
-      m_buffer[i] = GREEN;
-    }
-    for (int i=((SCREEN_WIDTH*SCREEN_HEIGHT)/3)*2; i<SCREEN_WIDTH*SCREEN_HEIGHT; i++) {
-      m_buffer[i] = BLUE;
-    }
-    
-    SDL_UpdateTexture(m_texture, NULL, m_buffer, SCREEN_WIDTH*sizeof(Uint32));
-    SDL_RenderClear(m_renderer);
-    SDL_RenderCopy(m_renderer, m_texture, NULL, NULL);
-    SDL_RenderPresent(m_renderer);
+//    for (int i=0; i<(SCREEN_WIDTH*SCREEN_HEIGHT)/3; i++) {
+//      m_buffer[i] = RED;
+//    }
+//    
+//    for (int i=(SCREEN_WIDTH*SCREEN_HEIGHT)/3; i<((SCREEN_WIDTH*SCREEN_HEIGHT)/3)*2; i++) {
+//      m_buffer[i] = GREEN;
+//    }
+//    for (int i=((SCREEN_WIDTH*SCREEN_HEIGHT)/3)*2; i<SCREEN_WIDTH*SCREEN_HEIGHT; i++) {
+//      m_buffer[i] = BLUE;
+//    }
     
     return true;
   }
@@ -83,6 +81,29 @@ namespace particles {
     }
     
     return true;
+  }
+  
+  void Screen::setPixel(int x, int y, Uint8 red, Uint8 green, Uint8 blue) {
+    
+    Uint32 color = 0;
+    Uint8 alpha = 0xFF;
+    
+    color += red;
+    color <<= 8;
+    color += green;
+    color <<= 8;
+    color += blue;
+    color <<= 8;
+    color += alpha;
+    
+    m_buffer[(y * SCREEN_WIDTH) + x] = color;
+  }
+  
+  void Screen::update() {
+    SDL_UpdateTexture(m_texture, NULL, m_buffer, SCREEN_WIDTH*sizeof(Uint32));
+    SDL_RenderClear(m_renderer);
+    SDL_RenderCopy(m_renderer, m_texture, NULL, NULL);
+    SDL_RenderPresent(m_renderer);
   }
   
   void Screen::close() {

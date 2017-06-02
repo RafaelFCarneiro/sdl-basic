@@ -21,10 +21,18 @@ int main(int argc, const char * argv[]) {
   
   while(true) {
     //  Update particles
-    //  Draw particles
-    //  Check for messages/events
+    for (int y=0; y < particles::Screen::SCREEN_HEIGHT; y++) {
+      for (int x=0; x < particles::Screen::SCREEN_WIDTH; x++) {
+        screen.setPixel(x, y, 128, 128, 128);
+      }
+    }
     
-    // Quit event
+    screen.setPixel(400, 300, 255, 255, 255);
+    
+    //  Draw particles
+    screen.update();
+    
+    //  Check for messages/events
     if (screen.processEvents() == false) {
       break;
     };
