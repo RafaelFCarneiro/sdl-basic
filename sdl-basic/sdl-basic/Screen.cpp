@@ -56,18 +56,6 @@ namespace particles {
     // setting collor 0 = black
     memset(m_buffer, 0, SCREEN_WIDTH*SCREEN_HEIGHT*sizeof(Uint32));
     
-    
-//    for (int i=0; i<(SCREEN_WIDTH*SCREEN_HEIGHT)/3; i++) {
-//      m_buffer[i] = RED;
-//    }
-//    
-//    for (int i=(SCREEN_WIDTH*SCREEN_HEIGHT)/3; i<((SCREEN_WIDTH*SCREEN_HEIGHT)/3)*2; i++) {
-//      m_buffer[i] = GREEN;
-//    }
-//    for (int i=((SCREEN_WIDTH*SCREEN_HEIGHT)/3)*2; i<SCREEN_WIDTH*SCREEN_HEIGHT; i++) {
-//      m_buffer[i] = BLUE;
-//    }
-    
     return true;
   }
   
