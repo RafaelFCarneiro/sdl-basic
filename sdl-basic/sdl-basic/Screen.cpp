@@ -74,7 +74,7 @@ namespace particles {
   void Screen::setPixel(int x, int y, Uint8 red, Uint8 green, Uint8 blue) {
     
     Uint32 color = 0;
-    Uint8 alpha = 0xFF;
+    Uint8 alpha = 0xF;
     
     color += red;
     color <<= 8;
@@ -83,6 +83,8 @@ namespace particles {
     color += blue;
     color <<= 8;
     color += alpha;
+    
+//    std::cout << std::setw(8) << std::hex << color << std::endl;
     
     m_buffer[(y * SCREEN_WIDTH) + x] = color;
   }
