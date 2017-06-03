@@ -8,7 +8,7 @@
 
 #include "Screen.hpp"
 
-namespace particles {
+namespace pui {
 
   Screen::Screen() :
     m_window(NULL), m_renderer(NULL), m_texture(NULL), m_buffer(NULL) {

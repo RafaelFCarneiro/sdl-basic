@@ -14,15 +14,13 @@
 
 int main(int argc, const char * argv[]) {
   
-  particles::Screen screen;
+  pui::Screen screen;
   
   if (screen.init() == false) {
     std::cout << "Error initialising SDL." << std::endl;
   }
   
   
-//  int max = 0;
-
   while(true) {
     //  Update particles
     
@@ -32,11 +30,8 @@ int main(int argc, const char * argv[]) {
     unsigned char red = (unsigned char)((1 + sin(elapsed * 0.0002)) * 128);
     unsigned char blue = (unsigned char)((1 + sin(elapsed * 0.0003)) * 128);
     
-//    if (green > max) max = green;
-//    std::cout << green << std::endl;
-    
-    for (int y=0; y < particles::Screen::SCREEN_HEIGHT; y++) {
-      for (int x=0; x < particles::Screen::SCREEN_WIDTH; x++) {
+    for (int y=0; y < pui::Screen::SCREEN_HEIGHT; y++) {
+      for (int x=0; x < pui::Screen::SCREEN_WIDTH; x++) {
         screen.setPixel(x, y, red, green, blue);
       }
     }
@@ -50,8 +45,6 @@ int main(int argc, const char * argv[]) {
     };
   }
 
-//  std::cout << max << std::endl;
-  
   screen.close();
   
   return 0;

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		377665961EE27C9B00CE261A /* Particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 377665941EE27C9B00CE261A /* Particle.cpp */; };
+		377665991EE27CBC00CE261A /* Swarm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 377665971EE27CBC00CE261A /* Swarm.cpp */; };
 		37C8AC371EDBBA2E00C188FD /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37C8AC361EDBBA2E00C188FD /* main.cpp */; };
 		37C8AC3F1EDBBA4C00C188FD /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37C8AC3E1EDBBA4C00C188FD /* SDL2.framework */; };
 		37CECF3E1EDBC9B700529F2F /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 37CECF3D1EDBC9B700529F2F /* README.md */; };
@@ -26,6 +28,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		377665941EE27C9B00CE261A /* Particle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Particle.cpp; sourceTree = "<group>"; };
+		377665951EE27C9B00CE261A /* Particle.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Particle.hpp; sourceTree = "<group>"; };
+		377665971EE27CBC00CE261A /* Swarm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Swarm.cpp; sourceTree = "<group>"; };
+		377665981EE27CBC00CE261A /* Swarm.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Swarm.hpp; sourceTree = "<group>"; };
 		37C8AC331EDBBA2E00C188FD /* sdl-basic */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "sdl-basic"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37C8AC361EDBBA2E00C188FD /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		37C8AC3E1EDBBA4C00C188FD /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
@@ -72,6 +78,10 @@
 				37C8AC361EDBBA2E00C188FD /* main.cpp */,
 				37DDE5621EDE580100E2E4FF /* Screen.cpp */,
 				37DDE5631EDE580100E2E4FF /* Screen.hpp */,
+				377665941EE27C9B00CE261A /* Particle.cpp */,
+				377665951EE27C9B00CE261A /* Particle.hpp */,
+				377665971EE27CBC00CE261A /* Swarm.cpp */,
+				377665981EE27CBC00CE261A /* Swarm.hpp */,
 			);
 			path = "sdl-basic";
 			sourceTree = "<group>";
@@ -142,6 +152,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				37CECF3E1EDBC9B700529F2F /* README.md in Sources */,
+				377665991EE27CBC00CE261A /* Swarm.cpp in Sources */,
+				377665961EE27C9B00CE261A /* Particle.cpp in Sources */,
 				37C8AC371EDBBA2E00C188FD /* main.cpp in Sources */,
 				37DDE5641EDE580100E2E4FF /* Screen.cpp in Sources */,
 			);

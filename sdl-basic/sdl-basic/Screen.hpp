@@ -13,7 +13,7 @@
 #include <iostream>
 #include <iomanip>
 
-namespace particles {
+namespace pui {
   class Screen {
   public:
     // SIZE
