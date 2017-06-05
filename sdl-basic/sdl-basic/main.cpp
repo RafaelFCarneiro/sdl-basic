@@ -48,11 +48,10 @@ int main(int argc, const char * argv[]) {
       testproject::Particle particle = pParticles[i];
       
       int x = (particle.m_x + 1) * (testproject::Screen::SCREEN_WIDTH/2);
-      int y = (particle.m_y + 1) * (testproject::Screen::SCREEN_HEIGHT/2);
+      int y = particle.m_y * (testproject::Screen::SCREEN_WIDTH/2) + testproject::Screen::SCREEN_HEIGHT/2;
       
       screen.setPixel(x, y, red, green, blue);
     }
-
     
     //  Draw screen
     screen.update();
