@@ -11,4 +11,23 @@
 
 #include <stdio.h>
 
+#include "Particle.hpp"
+
+namespace testproject {
+  class Swarm {
+  public:
+    const static int NPARTICLES = 5000;
+  
+  private:
+    Particle * m_pParticles;
+    
+  public:
+    Swarm();
+    virtual ~Swarm();
+    
+    const Particle * const getParticles() { return m_pParticles; };
+    
+  };
+}
+
 #endif /* Swarm_hpp */
