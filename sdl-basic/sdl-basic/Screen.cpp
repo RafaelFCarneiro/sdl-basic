@@ -8,7 +8,7 @@
 
 #include "Screen.hpp"
 
-namespace pui {
+namespace testproject {
 
   Screen::Screen() :
     m_window(NULL), m_renderer(NULL), m_texture(NULL), m_buffer(NULL) {

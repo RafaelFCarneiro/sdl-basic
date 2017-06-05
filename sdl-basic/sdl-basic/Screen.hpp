@@ -13,7 +13,7 @@
 #include <iostream>
 #include <iomanip>
 
-namespace pui {
+namespace testproject {
   class Screen {
   public:
     // SIZE

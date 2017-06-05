@@ -9,12 +9,17 @@
 #include <iostream>
 #include <SDL2/SDL.h>
 #include <math.h>
+#include <stdlib.h>
+#include <time.h>
 
 #include "Screen.hpp"
 
+
 int main(int argc, const char * argv[]) {
   
-  pui::Screen screen;
+  srand(time(NULL));
+  
+  testproject::Screen screen;
   
   if (screen.init() == false) {
     std::cout << "Error initialising SDL." << std::endl;
@@ -30,8 +35,8 @@ int main(int argc, const char * argv[]) {
     unsigned char red = (unsigned char)((1 + sin(elapsed * 0.0002)) * 128);
     unsigned char blue = (unsigned char)((1 + sin(elapsed * 0.0003)) * 128);
     
-    for (int y=0; y < pui::Screen::SCREEN_HEIGHT; y++) {
-      for (int x=0; x < pui::Screen::SCREEN_WIDTH; x++) {
+    for (int y=0; y < testproject::Screen::SCREEN_HEIGHT; y++) {
+      for (int x=0; x < testproject::Screen::SCREEN_WIDTH; x++) {
         screen.setPixel(x, y, red, green, blue);
       }
     }

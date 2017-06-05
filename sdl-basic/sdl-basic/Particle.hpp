@@ -11,4 +11,17 @@
 
 #include <stdio.h>
 
+namespace testproject {
+  
+  struct Particle {
+    double m_x;
+    double m_y;
+    
+  public:
+    Particle();
+    virtual ~Particle();
+  };
+
+}
+
 #endif /* Particle_hpp */
