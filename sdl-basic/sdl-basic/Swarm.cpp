@@ -18,4 +18,9 @@ namespace testproject {
     delete [] m_pParticles;
   }
 
+  void Swarm::upadte() {
+    for (int i=0; i<testproject::Swarm::NPARTICLES; i++) {
+      m_pParticles[i].update();      
+    }
+  }
 }
