@@ -24,7 +24,7 @@ namespace testproject {
     Particle();
     virtual ~Particle();
     
-    void update();
+    void update(int interval);
   };
 
 }

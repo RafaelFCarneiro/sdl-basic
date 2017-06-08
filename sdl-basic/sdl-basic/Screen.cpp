@@ -77,7 +77,7 @@ namespace testproject {
     }
     
     Uint32 color = 0;
-    Uint8 alpha = 0xF;
+    Uint8 alpha = 0xFF;
     
     color += red;
     color <<= 8;

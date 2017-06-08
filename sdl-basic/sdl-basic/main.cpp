@@ -36,7 +36,7 @@ int main(int argc, const char * argv[]) {
     int elapsed = SDL_GetTicks();
     
     screen.clear();
-    swarm.upadte();
+    swarm.upadte(elapsed);
     
     unsigned char green = (unsigned char)((1 + sin(elapsed * 0.0001)) * 128);
     unsigned char red = (unsigned char)((1 + sin(elapsed * 0.0002)) * 128);

@@ -20,12 +20,13 @@ namespace testproject {
   
   private:
     Particle * m_pParticles;
+    int m_lastTime;
     
   public:
     Swarm();
     virtual ~Swarm();
     
-    void upadte();
+    void upadte(int elapsed);
     
     const Particle * const getParticles() { return m_pParticles; };
     

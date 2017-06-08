@@ -10,7 +10,7 @@
 
 namespace testproject {
 
-  Swarm::Swarm() {
+  Swarm::Swarm() : m_lastTime(0) {
     m_pParticles = new Particle[NPARTICLES];
   }
   
@@ -18,9 +18,14 @@ namespace testproject {
     delete [] m_pParticles;
   }
 
-  void Swarm::upadte() {
+  void Swarm::upadte(int elapsed) {
+    
+    int interval = elapsed - m_lastTime;
+    
     for (int i=0; i<testproject::Swarm::NPARTICLES; i++) {
-      m_pParticles[i].update();      
+      m_pParticles[i].update(interval);
     }
+    
+    m_lastTime = elapsed;
   }
 }
