@@ -19,12 +19,14 @@ namespace testproject {
 
     double m_speed;
     double m_direction;
+
+  private:
+    void init();
     
   public:
     Particle();
     virtual ~Particle();
-    
-    void update(int interval);
+        void update(int interval);
   };
 
 }
